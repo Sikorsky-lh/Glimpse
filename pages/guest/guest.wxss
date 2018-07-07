@@ -1,0 +1,70 @@
+.item {
+  border-bottom: 1px solid #eee;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+}
+
+.item-active{
+  background: #eee;
+}
+
+.user {
+  display: flex;
+}
+
+.avatar {
+  width: 120rpx;
+  height: 120rpx;
+  margin-right: 20rpx;
+  margin-left: 20rpx;
+  border-radius: 50%;
+  border: 2px solid #c1c1c1;
+}
+
+.user-info-wrp {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.user-info {
+  display: flex;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.uesrname {
+  margin-right: 20rpx;
+}
+
+.age-male {
+  color: #4fb7f4;
+}
+
+.age-female {
+  color: #f42bcc;
+}
+
+.sex {
+  width: 1em;
+  height: 1em;
+  position: relative;
+  top: 2rpx;
+}
+
+.motto {
+  margin-top: 16rpx;
+  font-size: 0.8em;
+}
+
+.school {
+  position: relative;
+  top: -20rpx;
+  margin-right: 20rpx;
+  font-size: 0.8em;
+  color: #c1c1c1;
+}

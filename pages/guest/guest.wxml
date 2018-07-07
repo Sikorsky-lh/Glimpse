@@ -1,0 +1,18 @@
+<block wx:for='{{guests}}' wx:key='*this'>
+  <view class='item' hover-class='item-active'>
+    <view class='user' >
+      <image class='avatar' src='{{item.avatar}}' mode='aspectFill' bindtap='clickAvatar' id='{{index}}'></image>
+      <view class='user-info-wrp'>
+        <view class='user-info'>
+          <view class='user'>
+            <view class='uesrname'>{{item.username}}</view>
+            <view class="{{item.sex?'age-male':'age-female'}}">{{item.age}}</view>
+            <image class='sex' src="{{item.sex?'../../icons/male.png':'../../icons/female.png'}}"></image>
+          </view>
+          <view class='school'>{{item.school}}</view>
+        </view>
+        <text class='motto'>{{item.motto}}</text>
+      </view>
+    </view>
+  </view>
+</block>

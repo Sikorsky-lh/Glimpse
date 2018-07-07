@@ -1,0 +1,68 @@
+<!--toast控件放在最前面隐藏-->
+<toaster id='toaster'></toaster>
+
+<view class="moment" id="{{moment.id}}">
+  <view class="moment_userInfo">
+    <view class="user_avatar" style="position: relative;margin-right: 15px;" bindtap='goToProfile'>
+      <image src="{{moment.avatar}}" style="width: 40px; height: 40px; display: block; border-radius: 50%;border: 2px solid #c1c1c1;" />
+      <view class="weui-badge" style="position: absolute;bottom: -.008em;right: -.008em;">V</view>
+    </view>
+    <view class='username'>
+      <view style="font-size:1em">{{moment.userName}}</view>
+      <view style="font-size:0.8em;margin-top:4px;color:#c1c1c1">{{moment.timeStamp}}</view>
+    </view>
+    <view class="arrow" bindtap="addToList">+关注</view>
+  </view>
+  <view class="moment_content">{{moment.content}}</view>
+  <view class="moment_imgs">
+    <block wx:for="{{moment.imgs}}" wx:for-item="img" wx:key="*this">
+      <view id="{{moment.id}}" class="uploader__file" style="position: relative;margin-right: 10px;" bindtap="previewImage">
+        <image class="weui-uploader__img" src="{{img}}" id="{{img}}" mode="aspectFill" />
+      </view>
+    </block>
+  </view>
+  <view class="moment_btn_area">
+    <view class="weui-flex">
+      <view class="weui-flex__item_like">
+        <view class="placeholder" catchtap="handleLike" id="{{moment.id}}">
+          <image src="{{moment.liked?'../../icons/like_selected.png':'../../icons/like.png'}}" style="width:1.3em;height:1.3em;margin-right:5px"></image>
+          <view style="display:inline-block;color:#bfbfbf;font-size:0.9em;" wx:if="{{moment.likes>0?true:false}}">{{moment.likes}}</view>
+        </view>
+      </view>
+      <view class="weui-flex__item">
+        <view class="placeholder">
+          <image src="../../icons/comment.png" style="width:1.3em;height:1.3em; margin-right:5px"></image>
+          <view style="display:inline-block; color:#bfbfbf;font-size:0.9em" wx:if="{{moment.comments>0?true:false}}">{{moment.comments}}</view>
+        </view>
+      </view>
+      <view class="weui-flex__item_share">
+        <view class="placeholder">
+          <image src="../../icons/share.png" style="width:1.3em;height:1.3em;margin-right:5px"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class='bounder'>评论</view>
+<block wx:for="{{comments}}" wx:key="{{item.id}}">
+  <view class="{{item.selected?'comment-selected':'comment'}}" bindtap='showCommentSheet' id='{{item.id}}'>
+    <image src='{{item.avatar}}' class='avatar'></image>
+    <view class='user'>
+      <view class='user-info'>
+        <view class='info'>
+          <view class='nickname'>Sikorsky</view>
+          <view class='time'>{{item.time}}</view>
+        </view>
+        <view class='btns' catchtap='handleLikeComment' id='{{item.id}}'>
+          <image class='like-btn' src="{{item.liked?'../../icons/like_selected.png':'../../icons/like.png'}}">sd</image>
+          <view class='likes' wx:if="{{item.likes>0}}">{{item.likes}}</view>
+        </view>
+      </view>
+      <view class='other' hidden="{{!item.other}}">
+        <view style='border-left: 3px solid #1aad19'></view>
+        <view class='other-content'>{{item.other}}</view>
+      </view>
+      <view class='content'>{{item.content}}</view>
+    </view>
+  </view>
+</block>

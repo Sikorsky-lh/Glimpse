@@ -1,0 +1,38 @@
+<toaster id='toaster'></toaster>
+
+<view class='page'>
+  <textarea class='textarea' placeholder='说说今天的感想和收获吧...' auto-height='true'>
+  </textarea>
+  <view style='border-bottom:1px soild #000; height:100rpx'></view>
+  <view class='publish-uploader'>
+    <view class="weui-cell">
+      <view class="weui-cell__bd">
+        <view class="weui-uploader">
+          <view class="weui-uploader__bd">
+            <view class="weui-uploader__files" id="uploaderFiles">
+              <block wx:for="{{files}}" wx:key="*this">
+                <view class="weui-uploader__file" style="position: relative;margin-right: 25rpx;" bindtap="previewImage" id="{{item}}">
+                  <image class="weui-uploader__img" src="{{item}}" mode="aspectFill" />
+                  <image id='{{item}}' src='../../icons/cancel.png' style="position: absolute;top: 2rpx;right: 2rpx; height:40rpx;width:40rpx" catchtap='deleteImg'></image>
+                </view>
+              </block>
+            </view>
+            <view wx:if='{{imgNum<9?true:false}}' class="weui-uploader__input-box" bindtap="chooseImage">
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class='mine-settings'>
+  <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+    <view class="weui-cell__bd">所在位置</view>
+    <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+  </navigator>
+  <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+    <view class="weui-cell__bd">谁可以看</view>
+    <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+  </navigator>
+</view>
+<button class='btn' type='primary' bindtap='publish'>发布动态</button>

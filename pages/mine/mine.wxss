@@ -1,0 +1,115 @@
+Page {
+  background: #eee;
+}
+
+.mine-info {
+  background: #fff;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+.mine-user-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.avatar {
+  width: 65px;
+  height: 65px;
+  margin-right: 10px;
+  border-radius: 50%;
+  border: 2px solid #c1c1c1;
+}
+
+.user-info {
+  display: inline-block;
+}
+
+.btn-area {
+  position: absolute;
+  right: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.btn-action-change {
+  display: inline-block;
+  border: 1px solid #c1c1c1;
+  padding: 5px 10px;
+  border-radius: 20%;
+}
+
+.btn-action-change-active{
+  background: #eee;
+}
+
+.btn-action-edit {
+  display: inline-block;
+  border: 1px solid #f9b343;
+  border-radius: 20%;
+  margin-left: 20px;
+}
+
+.btn-action-edit-active{
+  background: #eee;
+}
+
+.mine-guest-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.guest-content {
+  flex: 1;
+  text-align: center;
+}
+
+.guest-num {
+  font-size: 0.7em;
+  position: relative;
+  color: #e27b38;
+  left: -95rpx;
+  top: -50rpx;
+}
+
+.hover-class{
+  background: #eee;
+}
+
+.mine-settings {
+  background: #fff;
+  margin-bottom: 15px;
+}
+
+.weui-cell:before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 1px;
+  border-top: 1rpx solid #f5f4f3;
+  color: #d9d9d9;
+}
+
+.weui-cell_active {
+  background-color: #faf8f6;
+}
+
+.mine-about {
+  background: #fff;
+  margin-bottom: 15px;
+}
+
+.mine-blacklist{
+  background: #fff;
+  margin-bottom: 15px;
+}
+
+.range{
+  font-size: 0.8em;
+  color: #c1c1c1;
+  margin-right: 10rpx;
+}

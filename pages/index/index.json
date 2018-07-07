@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "toaster": "../../components/toaster/toaster"
+  }
+}

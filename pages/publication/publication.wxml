@@ -1,0 +1,9 @@
+<toaster id='toaster'></toaster>
+
+<view class='map-container'>
+  <map id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="14" show-location class="map" circles='{{circles}}'></map>
+</view>
+<view class='btn-area'>
+  <slider class='slider' show-value='true' min='1' max='30' value='{{range}}' step='0.5' bindchanging='handleSliderChanging' bindchange='handleSliderChange'></slider>
+  <view class='btn' hover-class='btn-active' bindtap='confirm'>确认</view>
+</view>

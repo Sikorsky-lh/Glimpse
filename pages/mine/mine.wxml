@@ -1,0 +1,65 @@
+<view class='page'>
+  <view class='mine-info'>
+    <view class='mine-user-info'>
+      <image class='avatar' src='{{avatar}}' bindtap='previewAvatar'></image>
+      <view class='user-info'>
+        <view style='margin-bottom:8px'>Sikorsky</view>
+        <view style="font-size:0.8em;color:#5e5e5e">ID:662343</view>
+      </view>
+      <view class='btn-area'>
+        <view class='btn-action-change' hover-class='btn-action-change-active'>
+          <image style="width: 21px; height: 20px; display: block;" src='../../icons/change.png'></image>
+        </view>
+        <view class='btn-action-edit' hover-class='btn-action-edit-active' bindtap='editUserInfo'>
+          <image style="width: 40px; height: 30px; display: block;" src='../../icons/edit.png'></image>
+        </view>
+      </view>
+    </view>
+    <view class='mine-guest-info'>
+      <view class='guest-content' hover-class='hover-class' bindtap='goToGuest' id='我的关注'>
+        <view>5</view>
+        <view style="font-size:0.8em; color:#8e8e8e">关注</view>
+      </view>
+      <view class='guest-content' hover-class='hover-class' bindtap='goToGuest' id='我的粉丝'>
+        <view>1</view>
+        <view style="font-size:0.8em; color:#8e8e8e">粉丝</view>
+      </view>
+      <view class='guest-content' hover-class='hover-class'>
+        <view>90</view>
+        <view style="font-size:0.8em; color:#8e8e8e">访客</view>
+      </view>
+      <view class='guest-num'>+1</view>
+    </view>
+  </view>
+  <view class='mine-settings'>
+    <navigator url="../userpage/userpage" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+      <view class="weui-cell__bd">我的动态</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </navigator>
+    <navigator url="../publication/publication?range={{range}}" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+      <view class="weui-cell__bd">发布范围</view>
+      <view class='range'>{{range}}km</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </navigator>
+    <view class="weui-cell weui-cell_access">
+      <view class="weui-cell__bd">开启好友推荐</view>
+      <switch checked='true'></switch>
+    </view>
+  </view>
+  <view class='mine-about'>
+    <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+      <view class="weui-cell__bd">常见问题</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </navigator>
+    <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+      <view class="weui-cell__bd">关于我们</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </navigator>
+  </view>
+  <view class='mine-blacklist'>
+    <navigator url="../guest/guest?id=黑名单" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+      <view class="weui-cell__bd">黑名单</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </navigator>
+  </view>
+</view>

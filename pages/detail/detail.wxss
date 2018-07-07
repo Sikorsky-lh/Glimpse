@@ -1,0 +1,180 @@
+Page {
+  background: #eee;
+}
+
+.moment {
+  position: relative;
+  background-color: #fff;
+  padding: 10px;
+}
+
+.moment_userInfo {
+  overflow: hidden;
+  margin-left: 10px;
+}
+
+.user_avatar {
+  display: inline-block;
+}
+
+.username {
+  margin-top: 6px;
+  position: absolute;
+  top: 0;
+  display: inline-block;
+}
+
+.arrow {
+  display: inline-block;
+  position: absolute;
+  top: 8px;
+  right: 15px;
+  font-size: 0.9em;
+  color: #c1c1c1;
+  text-align: center;
+}
+
+.arrow-active{
+  background: #eee;
+}
+
+.moment_btn_area {
+  margin-top: 15px;
+  border-top: 0.5px solid #f6f4f4;
+}
+
+.placeholder {
+  display: flex;
+  align-items: center;
+}
+
+.moment_content {
+  margin: 8px 0 10px 10px;
+}
+
+.moment_imgs {
+  display: block;
+  margin-left: 10px;
+}
+
+.weui-uploader__img {
+  float: left;
+  width: 99px;
+  height: 99px;
+}
+
+.uploader__file {
+  display: inline-block;
+}
+
+.weui-flex {
+  margin-top: 5px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-around;
+}
+
+.weui-flex__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.weui-flex__item_like {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-left: 30px;
+}
+
+.weui-flex__item_share {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 30px;
+}
+
+.comment {
+  display: flex;
+  flex-direction: row;
+  background: #fff;
+  padding: 20rpx;
+  border-bottom: 1px solid #eee;
+}
+
+.comment-selected{
+  display: flex;
+  flex-direction: row;
+  background: #eee;
+  padding: 20rpx;
+  border-bottom: 1px solid #eee;
+}
+
+.avatar {
+  height: 100rpx;
+  width: 100rpx;
+  margin: 0 10rpx 0 0;
+  border-radius: 50%;
+}
+
+.user {
+  flex: 1;
+}
+
+.nickname {
+}
+
+.time {
+  color: #c1c1c1;
+  font-size: 0.7em;
+}
+
+.other {
+  margin-top: 20rpx;
+  display: flex;
+  flex-direction: row;
+  background: #eee;
+}
+
+.other-content {
+  flex: 1;
+  margin-left: 10rpx;
+}
+
+.content {
+  margin: 20rpx 0 10rpx 0;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: row;
+}
+
+.info {
+  flex: 1;
+}
+
+.btns{
+  
+}
+
+.like-btn {
+  width: 40rpx;
+  height: 40rpx;
+  display: inline-block;
+}
+
+.likes{
+  display: inline-block;
+  margin-left: 8rpx;
+  position: relative;
+  top: -8rpx;
+  color: #c1c1c1;
+  font-size: 0.9em;
+}
+
+.bounder{
+  font-size: 1.1em;
+  margin: 10rpx; 
+}

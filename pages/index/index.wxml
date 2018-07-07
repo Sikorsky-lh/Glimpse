@@ -1,0 +1,72 @@
+<!--toast控件放在最前面隐藏-->
+<toaster id='toaster'></toaster>
+
+
+<view class="page">
+  <view class="page__bd">
+    <view class="weui-tab">
+      <view class="weui-navbar">
+        <block wx:for="{{tabs}}" wx:key="*this">
+          <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+            <view class="weui-navbar__title ">{{item}}</view>
+          </view>
+        </block>
+        <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+      </view>
+      <view class="weui-tab__panel">
+        <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+          <block wx:for="{{moments}}" wx:key="{{item.id}}">
+            <view class="moment" id="{{item.id}}">
+              <view bindtap='goToDetail'>
+                <view class="moment_userInfo">
+                  <view class="user_avatar" style="position: relative;margin-right: 15px;" catchtap='goToProfile'>
+                    <image src="{{item.avatar}}" style="width: 40px; height: 40px; display: block; border-radius: 50%;border: 2px solid #c1c1c1;" />
+                    <view class="weui-badge" style="position: absolute;bottom: -.008em;right: -.008em;">V</view>
+                  </view>
+                  <view class='username'>
+                    <view style="font-size:1em">{{item.userName}}</view>
+                    <view style="font-size:0.8em;margin-top:4px;color:#c1c1c1">{{item.timeStamp}}</view>
+                  </view>
+                  <image class="arrow" src="../../icons/more.png" catchtap="showActionSheet"></image>
+                </view>
+                <view class="moment_content">{{item.content}}</view>
+                <view class="moment_imgs">
+                  <block wx:for="{{item.imgs}}" wx:for-item="img" wx:key="*this">
+                    <view id="{{item.id}}" class="uploader__file" style="position: relative;margin-right: 10px;" catchtap="previewImage">
+                      <image class="weui-uploader__img" src="{{img}}" id="{{img}}" mode="aspectFill" />
+                    </view>
+                  </block>
+                </view>
+              </view>
+              <view class="moment_btn_area">
+                <view class="weui-flex">
+                  <view class="weui-flex__item_like">
+                    <view class="placeholder" catchtap="handleLike" id="{{item.id}}">
+                      <image src="{{item.liked?'../../icons/like_selected.png':'../../icons/like.png'}}" style="width:1.3em;height:1.3em;margin-right:5px"></image>
+                      <view style="display:inline-block;color:#bfbfbf;font-size:0.9em;" wx:if="{{item.likes>0?true:false}}">{{item.likes}}</view>
+                    </view>
+                  </view>
+                  <view class="weui-flex__item">
+                    <view class="placeholder">
+                      <image src="../../icons/comment.png" style="width:1.3em;height:1.3em; margin-right:5px"></image>
+                      <view style="display:inline-block; color:#bfbfbf;font-size:0.9em" wx:if="{{item.comments>0?true:false}}">{{item.comments}}</view>
+                    </view>
+                  </view>
+                  <view class="weui-flex__item_share">
+                    <view class="placeholder">
+                      <image src="../../icons/share.png" style="width:1.3em;height:1.3em;margin-right:5px"></image>
+                    </view>
+                  </view>
+                </view>
+              </view>
+            </view>
+          </block>
+        </view>
+        <view class="weui-tab__content" hidden="{{activeIndex != 1}}">选项二的内容</view>
+      </view>
+    </view>
+  </view>
+  <view class='publish-momment' hover-class='publish-momment-active' catchtap='publishMoment'>
+    <image src='../../icons/add.png' class="add"></image>
+  </view>
+</view>

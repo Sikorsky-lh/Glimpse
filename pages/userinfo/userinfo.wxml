@@ -1,0 +1,43 @@
+<toaster id='toaster'></toaster>
+
+<view class='page'>
+  <view class='avatar-container' bindtap='chooseImg'>
+    <image class='avatar' src='{{avatar}}'></image>
+    <view class='camera-container'>
+      <image src='../../icons/camera.png' class='camera' mode='aspectFit'></image>
+    </view>
+  </view>
+  <view class='user-info'>
+    <view class='info-container'>
+      <input placeholder='请输入昵称' bindinput='handleNickname'></input>
+    </view>
+  </view>
+  <view class='user-info'>
+    <view class='info-container'>
+      <view class='info-key'>性别</view>
+      <radio-group class="input">
+        <radio checked='true'>男</radio>
+        <radio style='margin-left:40rpx'>女</radio>
+      </radio-group>
+    </view>
+  </view>
+  <view class='user-info'>
+    <view class='info-container'>
+      <view class='info-key'>生日</view>
+      <picker mode="date" value="{{date}}" start="1949-09-01" end="2018-01-01" bindchange="bindDateChange">
+        <view class="input">{{date}}</view>
+      </picker>
+    </view>
+  </view>
+  <view class='user-info'>
+    <view class='info-container'>
+      <view class='info-key'>家乡</view>
+      <picker mode="region" value="{{date}}" bindchange="bindRegionChange">
+        <view class="input">{{region}}</view>
+      </picker>
+    </view>
+  </view>
+  <view>个性签名</view>
+  <textarea class='motto' placeholder='请输入个性签名...' adjust-position bindinput='handleMotto'></textarea>
+  <button type='primary' class='submit-btn' bindtap='confirm'>提交</button>
+</view>

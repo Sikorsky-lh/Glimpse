@@ -1,0 +1,143 @@
+/**index.wxss**/
+
+Page {
+  background: #eee;
+}
+
+.page__bd {
+  background: #fff;
+}
+
+.weui-navbar {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  position: absolute;
+  z-index: 500;
+  top: 0;
+  width: 100%;
+  background: #fff;
+  border-bottom: 1rpx solid #ccc;
+}
+
+.weui-tab__panel {
+  box-sizing: border-box;
+  height: 100%;
+  padding-top: 50px;
+  overflow: auto;
+  background: #eee;
+  -webkit-overflow-scrolling: touch;
+}
+
+.weui-flex {
+  margin-top: 5px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-around;
+}
+
+.weui-flex__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.weui-flex__item_like {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-left: 30px;
+}
+
+.weui-flex__item_share {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 30px;
+}
+
+.moment {
+  position: relative;
+  background-color: #fff;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.moment_userInfo {
+  overflow: hidden;
+  margin-left: 10px;
+}
+
+.user_avatar {
+  display: inline-block;
+}
+
+.username {
+  margin-top: 6px;
+  position: absolute;
+  top: 0;
+  display: inline-block;
+}
+
+.arrow {
+  display: inline-block;
+  position: absolute;
+  top: 8px;
+  right: 15px;
+  width: 25px;
+  height: 25px;
+}
+
+.moment_btn_area {
+  margin-top: 15px;
+  border-top: 0.5px solid #f6f4f4;
+}
+
+.placeholder {
+  display: flex;
+  align-items: center;
+}
+
+.moment_content{
+  margin:8px 0 10px 10px;
+}
+
+.moment_imgs {
+  display: block;
+  margin-left: 10px;
+}
+
+.weui-uploader__img {
+  float: left;
+  width: 99px;
+  height: 99px;
+}
+
+.uploader__file {
+  display: inline-block;
+}
+
+.publish-momment{
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  border-radius: 100%;
+  background: #1aad19;
+  margin-right: 40rpx;
+  margin-bottom: 40rpx;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30rpx;
+}
+
+.publish-momment-active{
+  background: #199f18;
+}
+
+.add{
+  width: 60rpx;
+  height: 60rpx;
+}
