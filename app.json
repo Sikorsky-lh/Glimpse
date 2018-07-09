@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/notification/notification",
     "pages/index/index",
     "pages/detail/detail",
     "pages/userpage/userpage",
@@ -7,8 +8,7 @@
     "pages/userinfo/userinfo",
     "pages/publish/publish",
     "pages/mine/mine",
-    "pages/publication/publication",
-    "pages/notification/notification"
+    "pages/publication/publication"
   ],
   "window": {
     "backgroundTextStyle": "light",

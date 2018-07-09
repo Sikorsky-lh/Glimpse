@@ -1,1 +1,77 @@
-/* pages/notification/notification.wxss */
+.notification {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid #eee;
+  padding: 20rpx;
+}
+
+.notification:first {
+  border-top: 1px solid #eee;
+}
+
+.avatar {
+  height: 100rpx;
+  width: 100rpx;
+  margin: 10rpx 20rpx 0 0;
+  border-radius: 50%;
+}
+
+.info {
+  flex: 1;
+}
+
+.user {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.nickname {
+  font-weight: bold;
+}
+
+.time {
+  color: #c1c1c1;
+  margin-left: 20rpx;
+  font-size: 0.8em;
+}
+
+.content {
+  margin-top: 10rpx;
+}
+
+.reply {
+  margin-top: 10rpx;
+  display: flex;
+  align-items: center;
+}
+
+.reply-img {
+  width: 0.8em;
+  height: 0.8em;
+  margin-right: 5rpx;
+}
+
+.reply-txt {
+  display: inline-block;
+  font-size: 0.7em;
+  color: #c1c1c1;
+}
+
+.like {
+  margin-top: 10rpx;
+  width: 1em;
+  height: 1em;
+}
+
+.other {
+  margin-top: 20rpx;
+  display: flex;
+  flex-direction: row;
+  background: #eee;
+}
+
+.other-content {
+  flex: 1;
+  margin-left: 10rpx;
+}

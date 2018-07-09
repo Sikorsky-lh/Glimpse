@@ -1,4 +1,5 @@
 {
+  "navigationBarTitleText": "个人动态",
   "usingComponents": {
     "toaster": "../../components/toaster/toaster"
   }

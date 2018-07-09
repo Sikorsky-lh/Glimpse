@@ -1,2 +1,21 @@
-<!--pages/notification/notification.wxml-->
-<text>pages/notification/notification.wxml</text>
+<block wx:for="{{notifications}}">
+  <view class='notification'>
+    <image class='avatar' src='{{item.avatar}}'></image>
+    <view class='info'>
+      <view class='user'>
+        <view class='nickname'>Sikorsky</view>
+        <view class='time'>昨天 23:57</view>
+      </view>
+      <view class='other' hidden="{{!item.other}}">
+        <view style='border-left: 3px solid #1aad19'></view>
+        <view class='other-content'>哈哈哈哈哈</view>
+      </view>
+      <view class='content' wx:if="{{item.comment}}">{{item.comment}}</view>
+      <image src='../../icons/like_selected.png' class='like' wx:if="{{item.like}}"></image>
+      <view class='reply'>
+        <image class='reply-img' src='../../icons/comment.png'></image>
+        <view class='reply-txt'>回复</view>
+      </view>
+    </view>
+  </view>
+</block>

@@ -16,7 +16,7 @@ Page({
         timeStamp: '2天前',
         avatar: 'http://ww1.sinaimg.cn/large/ec8fa7e5gy1fssaldn1mfj20hs0hs3zn.jpg',
         content: 'WeUI 是一套同微信原生视觉体验一致的基础样式库，由微信官方设计团队为微信内网页和微信小程序量身设计，令用户的使用感知更加统一。',
-        imgs: ['http://ww1.sinaimg.cn/large/ec8fa7e5gy1flqth891jnj21e612sk3o.jpg',
+        imgs: ['http://ww1.sinaimg.cn/large/ec8fa7e5gy1ft2a420kn3j208u05tmxr.jpg',
           'http://ww1.sinaimg.cn/large/ec8fa7e5gy1flqu5ftspyj20u01hc778.jpg',
           'http://ww1.sinaimg.cn/large/ec8fa7e5gy1fqsf5calk7j20u06mbkjm.jpg',
           'http://ww1.sinaimg.cn/large/ec8fa7e5gy1fqskcpvvq2j20u01hcdnp.jpg'
@@ -33,8 +33,8 @@ Page({
         content: 'WeUI 是一套同微信原生视觉体验一致的基础样式库，由微信官方设计团队为微信内网页和微信小程序量身设计，令用户的使用感知更加统一。',
         imgs: ['http://ww1.sinaimg.cn/large/ec8fa7e5gy1flqth891jnj21e612sk3o.jpg',
           'http://ww1.sinaimg.cn/large/ec8fa7e5gy1flqu5ftspyj20u01hc778.jpg',
-          'http://ww1.sinaimg.cn/large/ec8fa7e5gy1fqsf5calk7j20u06mbkjm.jpg',
-          'http://ww1.sinaimg.cn/large/ec8fa7e5gy1fqskcpvvq2j20u01hcdnp.jpg'
+          'http://ww1.sinaimg.cn/large/ec8fa7e5gy1ft2a7shnyrj2076076q3w.jpg',
+          'http://ww1.sinaimg.cn/large/ec8fa7e5gy1ft2a420kn3j208u05tmxr.jpg'
         ],
         likes: 2,
         comments: 3,
