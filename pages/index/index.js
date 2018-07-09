@@ -10,6 +10,7 @@ Page({
     activeIndex: 0,
     sliderOffset: 0,
     sliderLeft: 0,
+    notification: 10,
     moments: [{
         id: 0,
         userName: 'Sikorsky',
@@ -23,6 +24,7 @@ Page({
         ],
         likes: 0,
         comments: 3,
+        location: '',
         liked: false
       },
       {
@@ -38,6 +40,7 @@ Page({
         ],
         likes: 2,
         comments: 3,
+        location: '河海大学',
         liked: false
       },
       {
@@ -52,6 +55,7 @@ Page({
         ],
         likes: 2,
         comments: 3,
+        location: '南京市政府',
         liked: false
       },
       {
@@ -65,6 +69,7 @@ Page({
         ],
         likes: 78,
         comments: 12,
+        location: '南师大',
         liked: false
       },
 
@@ -74,6 +79,24 @@ Page({
 
   onReady: function() {
     this.toaster = this.selectComponent("#toaster");
+  },
+
+  onPullDownRefresh() {
+    // let that=this;
+    wx.setNavigationBarTitle({
+      title: '加载中...',
+    })
+    wx.showNavigationBarLoading();
+    setTimeout(() => {
+      wx.setNavigationBarTitle({
+        title: 'Glimpse',
+      })
+      this.setData({
+        notification: 2
+      });
+      wx.hideNavigationBarLoading();
+      wx.stopPullDownRefresh();
+    }, 3000);
   },
 
   onLoad() {
@@ -88,7 +111,7 @@ Page({
     });
   },
 
-  goToProfile(){
+  goToProfile() {
     wx.navigateTo({
       url: '../userpage/userpage',
     })
@@ -151,15 +174,24 @@ Page({
     })
   },
 
-  publishMoment(e){
+  publishMoment(e) {
     wx.navigateTo({
       url: '../publish/publish',
     })
   },
 
-  goToDetail(){
+  goToDetail() {
     wx.navigateTo({
       url: '../detail/detail',
     })
+  },
+
+  handleNotification() {
+    this.setData({
+      notification: 0
+    });
+    wx.switchTab({
+      url: '../notification/notification',
+    });
   }
 })

@@ -1,5 +1,7 @@
 {
   "usingComponents": {
     "toaster": "../../components/toaster/toaster"
-  }
+  },
+  "enablePullDownRefresh":true,
+  "backgroundTextStyle":"dark"
 }

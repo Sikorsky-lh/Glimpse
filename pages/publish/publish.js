@@ -1,7 +1,10 @@
 Page({
   data: {
     files: [],
-    imgNum: 0
+    imgNum: 0,
+    location: '',
+    access: ['公开', '仅自己可见'],
+    accessibility: ''
   },
 
   onReady() {
@@ -25,6 +28,7 @@ Page({
       }
     })
   },
+
   previewImage: function(e) {
     wx.previewImage({
       current: e.currentTarget.id, // 当前显示图片的http链接
@@ -49,5 +53,25 @@ Page({
     this.toaster.showToast({
       msg: '发布成功！'
     })
+  },
+
+  chooseLocation() {
+    let that = this;
+    wx.chooseLocation({
+      success: function(res) {
+        console.log(res);
+        that.setData({
+          location: res.name
+        })
+        console.log(that.data)
+      },
+    })
+  },
+
+  handleAccess(res) {
+    let access=this.data.access;
+    this.setData({
+      accessibility: access[res.detail.value]
+    });
   }
 });

@@ -37,6 +37,10 @@
                     </view>
                   </block>
                 </view>
+                <view class='moment_location' wx:if="{{item.location}}">
+                  <image src='../../icons/location.png' class='loaction_img'></image>
+                  <view class='loaction_txt'>{{item.location}}</view>
+                </view>
               </view>
               <view class="moment_btn_area">
                 <view class="weui-flex">
@@ -69,4 +73,5 @@
   <view class='publish-momment' hover-class='publish-momment-active' catchtap='publishMoment'>
     <image src='../../icons/add.png' class="add"></image>
   </view>
+  <view class='notification' catchtap='handleNotification' wx:if="{{notification>0}}">有{{notification}}条新消息</view>
 </view>

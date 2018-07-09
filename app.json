@@ -1,12 +1,12 @@
 {
   "pages": [
-    "pages/notification/notification",
     "pages/index/index",
+    "pages/publish/publish",
+    "pages/notification/notification",
     "pages/detail/detail",
     "pages/userpage/userpage",
     "pages/guest/guest",
     "pages/userinfo/userinfo",
-    "pages/publish/publish",
     "pages/mine/mine",
     "pages/publication/publication"
   ],

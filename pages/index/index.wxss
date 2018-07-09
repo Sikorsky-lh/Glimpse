@@ -5,7 +5,7 @@ Page {
 }
 
 .page__bd {
-  background: #fff;
+  background: #eee;
 }
 
 .weui-navbar {
@@ -118,6 +118,17 @@ Page {
   display: inline-block;
 }
 
+.notification{
+  position: fixed;
+  background: #1aad19;
+  width: 100%;
+  padding: 20rpx 10rpx;
+  color: #fff;
+  top: 0rpx;
+  left: 0;
+  text-align: center;
+}
+
 .publish-momment{
   position: fixed;
   bottom: 0;
@@ -140,4 +151,21 @@ Page {
 .add{
   width: 60rpx;
   height: 60rpx;
+}
+
+.moment_location{
+  margin-left: 20rpx;
+  margin-top: 10rpx;
+  display: flex;
+  align-items: center;
+}
+
+.loaction_img{
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.loaction_txt{
+  color: #c1c1c1;
+  font-size: 0.9em;
 }

@@ -26,13 +26,15 @@
   </view>
 </view>
 <view class='mine-settings'>
-  <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+  <view url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active" bindtap='chooseLocation'>
     <view class="weui-cell__bd">所在位置</view>
-    <view class="weui-cell__ft weui-cell__ft_in-access"></view>
-  </navigator>
-  <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+    <view class="weui-cell__ft weui-cell__ft_in-access">{{location}}</view>
+  </view>
+  <picker class="weui-cell weui-cell_access" hover-class="weui-cell_active" 
+  mode="selector" range="{{access}}" bindchange="handleAccess"
+  >
     <view class="weui-cell__bd">谁可以看</view>
-    <view class="weui-cell__ft weui-cell__ft_in-access"></view>
-  </navigator>
+    <view class="access">{{accessibility}}</view>
+  </picker>
 </view>
 <button class='btn' type='primary' bindtap='publish'>发布动态</button>
