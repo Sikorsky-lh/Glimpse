@@ -2,6 +2,20 @@ Page {
   background: #eee;
 }
 
+.backhome {
+  position: fixed;
+  bottom: 40rpx;
+  right: 50rpx;
+}
+
+.icon-home {
+  height: 100rpx;
+  width: 100rpx;
+  background: #1aad19;
+  border-radius: 50%;
+  padding: 10rpx;
+}
+
 .moment {
   position: relative;
   background-color: #fff;
@@ -34,7 +48,7 @@ Page {
   text-align: center;
 }
 
-.arrow-active{
+.arrow-active {
   background: #eee;
 }
 
@@ -103,7 +117,7 @@ Page {
   border-bottom: 1px solid #eee;
 }
 
-.comment-selected{
+.comment-selected {
   display: flex;
   flex-direction: row;
   background: #eee;
@@ -155,8 +169,7 @@ Page {
   flex: 1;
 }
 
-.btns{
-  
+.btns {
 }
 
 .like-btn {
@@ -165,7 +178,7 @@ Page {
   display: inline-block;
 }
 
-.likes{
+.likes {
   display: inline-block;
   margin-left: 8rpx;
   position: relative;
@@ -174,7 +187,7 @@ Page {
   font-size: 0.9em;
 }
 
-.bounder{
+.bounder {
   font-size: 1.1em;
-  margin: 10rpx; 
+  margin: 10rpx;
 }

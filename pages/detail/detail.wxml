@@ -66,3 +66,6 @@
     </view>
   </view>
 </block>
+<view class='backhome' wx:if="{{backhome!=0}}" catchtap='backhome'>
+  <image src='../../icons/backhome.png' class='icon-home'></image>
+</view>

@@ -97,10 +97,15 @@ Page {
 .placeholder {
   display: flex;
   align-items: center;
+  padding: 5rpx 10rpx;
 }
 
-.moment_content{
-  margin:8px 0 10px 10px;
+.placeholder-active {
+  background: #eee;
+}
+
+.moment_content {
+  margin: 8px 0 10px 10px;
 }
 
 .moment_imgs {
@@ -118,7 +123,7 @@ Page {
   display: inline-block;
 }
 
-.notification{
+.notification {
   position: fixed;
   background: #1aad19;
   width: 100%;
@@ -129,7 +134,7 @@ Page {
   text-align: center;
 }
 
-.publish-momment{
+.publish-momment {
   position: fixed;
   bottom: 0;
   right: 0;
@@ -144,28 +149,28 @@ Page {
   padding: 30rpx;
 }
 
-.publish-momment-active{
+.publish-momment-active {
   background: #199f18;
 }
 
-.add{
+.add {
   width: 60rpx;
   height: 60rpx;
 }
 
-.moment_location{
+.moment_location {
   margin-left: 20rpx;
   margin-top: 10rpx;
   display: flex;
   align-items: center;
 }
 
-.loaction_img{
+.loaction_img {
   width: 40rpx;
   height: 40rpx;
 }
 
-.loaction_txt{
+.loaction_txt {
   color: #c1c1c1;
   font-size: 0.9em;
 }

@@ -1,13 +1,15 @@
+<toaster id="toaster"></toaster>
+
 <view class='page'>
   <view class='mine-info'>
-    <view class='mine-user-info'>
+    <view class='mine-user-info' wx:if="{{logged}}">
       <image class='avatar' src='{{avatar}}' bindtap='previewAvatar'></image>
       <view class='user-info'>
         <view style='margin-bottom:8px'>Sikorsky</view>
         <view style="font-size:0.8em;color:#5e5e5e">ID:662343</view>
       </view>
       <view class='btn-area'>
-        <view class='btn-action-change' hover-class='btn-action-change-active'>
+        <view class='btn-action-change' hover-class='btn-action-change-active' bindtap='changeIdentity'>
           <image style="width: 21px; height: 20px; display: block;" src='../../icons/change.png'></image>
         </view>
         <view class='btn-action-edit' hover-class='btn-action-edit-active' bindtap='editUserInfo'>
@@ -15,20 +17,24 @@
         </view>
       </view>
     </view>
+    <view class='mine-user-login' wx:if="{{!logged}}">
+      <image class='avatar' src='../../icons/mine.png'></image>
+      <view class='login' bindtap='handleLogin'>未登录</view>
+    </view>
     <view class='mine-guest-info'>
       <view class='guest-content' hover-class='hover-class' bindtap='goToGuest' id='我的关注'>
-        <view>5</view>
+        <view>{{follow}}</view>
         <view style="font-size:0.8em; color:#8e8e8e">关注</view>
       </view>
       <view class='guest-content' hover-class='hover-class' bindtap='goToGuest' id='我的粉丝'>
-        <view>1</view>
+        <view>{{fans}}</view>
         <view style="font-size:0.8em; color:#8e8e8e">粉丝</view>
       </view>
       <view class='guest-content' hover-class='hover-class'>
-        <view>90</view>
+        <view>{{visitor}}</view>
         <view style="font-size:0.8em; color:#8e8e8e">访客</view>
       </view>
-      <view class='guest-num'>+1</view>
+      <view class='guest-num' wx:if="{{newVisitor>0}}">+{{newVisitor}}</view>
     </view>
   </view>
   <view class='mine-settings'>

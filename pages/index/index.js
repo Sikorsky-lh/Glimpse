@@ -81,6 +81,13 @@ Page({
     this.toaster = this.selectComponent("#toaster");
   },
 
+  onShareAppMessage: function() {
+    return {
+      title: this.data.moments[0].content,
+      path: '/pages/detail/detail?backhome=1'
+    }
+  },
+
   onPullDownRefresh() {
     // let that=this;
     wx.setNavigationBarTitle({
@@ -182,7 +189,7 @@ Page({
 
   goToDetail() {
     wx.navigateTo({
-      url: '../detail/detail',
+      url: '../detail/detail?backhome=0',
     })
   },
 

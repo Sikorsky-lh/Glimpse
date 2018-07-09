@@ -51,15 +51,16 @@
                     </view>
                   </view>
                   <view class="weui-flex__item">
-                    <view class="placeholder">
+                    <view class="placeholder" hover-class='placeholder-active'>
                       <image src="../../icons/comment.png" style="width:1.3em;height:1.3em; margin-right:5px"></image>
                       <view style="display:inline-block; color:#bfbfbf;font-size:0.9em" wx:if="{{item.comments>0?true:false}}">{{item.comments}}</view>
                     </view>
                   </view>
                   <view class="weui-flex__item_share">
-                    <view class="placeholder">
+                    <label class="placeholder">
                       <image src="../../icons/share.png" style="width:1.3em;height:1.3em;margin-right:5px"></image>
-                    </view>
+                      <button open-type='share' hidden='true'></button>
+                    </label>
                   </view>
                 </view>
               </view>

@@ -2,6 +2,7 @@
 Page({
   data: {
     moment: {
+      backhome: 0,
       id: 0,
       userName: 'Sikorsky',
       timeStamp: '2天前',
@@ -57,6 +58,13 @@ Page({
         time: '2018-07-05 12:34:45'
       },
     ],
+  },
+
+  onLoad(options) {
+    console.log(options);
+    this.setData({
+      backhome: options.backhome
+    })
   },
 
   onReady: function() {
@@ -138,6 +146,12 @@ Page({
           comments: comments
         });
       }
+    })
+  },
+
+  backhome(){
+    wx.switchTab({
+      url: '../index/index',
     })
   }
 })

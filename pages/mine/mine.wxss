@@ -20,10 +20,26 @@ Page {
   margin-right: 10px;
   border-radius: 50%;
   border: 2px solid #c1c1c1;
+  margin-left: 40rpx;
 }
 
 .user-info {
   display: inline-block;
+}
+
+.mine-user-login{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+
+.login {
+  padding: 10rpx 20rpx;
+  border-radius: 20rpx;
+  border: 1px #1aad19 solid;
+  font-size: 1.2em;
+  margin-left: 20rpx;
 }
 
 .btn-area {
@@ -40,7 +56,7 @@ Page {
   border-radius: 20%;
 }
 
-.btn-action-change-active{
+.btn-action-change-active {
   background: #eee;
 }
 
@@ -51,7 +67,7 @@ Page {
   margin-left: 20px;
 }
 
-.btn-action-edit-active{
+.btn-action-edit-active {
   background: #eee;
 }
 
@@ -74,7 +90,7 @@ Page {
   top: -50rpx;
 }
 
-.hover-class{
+.hover-class {
   background: #eee;
 }
 
@@ -103,12 +119,12 @@ Page {
   margin-bottom: 15px;
 }
 
-.mine-blacklist{
+.mine-blacklist {
   background: #fff;
   margin-bottom: 15px;
 }
 
-.range{
+.range {
   font-size: 0.8em;
   color: #c1c1c1;
   margin-right: 10rpx;
