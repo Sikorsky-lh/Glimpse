@@ -30,12 +30,12 @@ Page({
         id: 1,
         content: '国家需要这样的人，也需要这样的电影',
         other: '程勇，陆勇是一个人吗',
+        othername: '风逝',
         liked: true,
         likes: 12,
         selected: false,
         time: '2018-07-05 12:34:45'
       },
-
       {
         avatar: 'http://ww1.sinaimg.cn/large/ec8fa7e5gy1fq9z1xqw4yj20hs0hsjsx.jpg',
         id: 2,
@@ -46,12 +46,12 @@ Page({
         selected: false,
         time: '2018-07-05 12:34:45'
       },
-
       {
         avatar: 'http://ww1.sinaimg.cn/large/ec8fa7e5gy1fq9z1xqw4yj20hs0hsjsx.jpg',
         id: 3,
         content: '国家需要这样的人，也需要这样的电影',
-        other: '程勇，陆勇是一个人吗',
+        other: '程勇，陆勇是一个人吗?哈哈哈哈哈哈哈哈哈',
+        othername:'哈哈哈',
         liked: false,
         likes: 0,
         selected: false,
@@ -149,7 +149,13 @@ Page({
     })
   },
 
-  backhome(){
+  goToGuest(){
+    this.toaster.showToast({
+      msg:"哈哈哈哈哈"
+    })
+  },
+
+  backhome() {
     wx.switchTab({
       url: '../index/index',
     })

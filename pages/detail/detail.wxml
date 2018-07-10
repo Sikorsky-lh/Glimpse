@@ -58,11 +58,13 @@
           <view class='likes' wx:if="{{item.likes>0}}">{{item.likes}}</view>
         </view>
       </view>
-      <view class='other' hidden="{{!item.other}}">
-        <view style='border-left: 3px solid #1aad19'></view>
-        <view class='other-content'>{{item.other}}</view>
-      </view>
       <view class='content'>{{item.content}}</view>
+      <view class='other' hidden="{{!item.other}}">
+        <!-- <view style='border-left: 3px solid #1aad19'></view> -->
+        <view class='other-content' catchtap='goToGuest'>
+          <span style='color:#1aad19'>@{{item.othername}}:</span>
+          {{item.other}}</view>
+      </view>
     </view>
   </view>
 </block>
