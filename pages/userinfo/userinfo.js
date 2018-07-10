@@ -53,7 +53,7 @@ Page({
     console.log(e)
     this.setData({
       motto: e.detail.value,
-      count: e.detail.cursor
+      count: e.detail.value.length
     });
   },
 

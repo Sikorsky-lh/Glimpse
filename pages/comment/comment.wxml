@@ -1,0 +1,5 @@
+<view class='page'>
+  <textarea maxlength='100' placeholder='请输入评论...' class='text' bindinput='handleInput'></textarea>
+</view>
+<view class='count'>{{count}}/100</view>
+<view class='send' hover-class='send-active'>发表评论</view>

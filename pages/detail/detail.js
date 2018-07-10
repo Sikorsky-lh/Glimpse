@@ -61,7 +61,6 @@ Page({
   },
 
   onLoad(options) {
-    console.log(options);
     this.setData({
       backhome: options.backhome
     })

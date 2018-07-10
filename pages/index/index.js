@@ -256,5 +256,11 @@ Page({
     wx.switchTab({
       url: '../notification/notification',
     });
+  },
+
+  handleComment(){
+    wx.navigateTo({
+      url: '../comment/comment',
+    })
   }
 })
