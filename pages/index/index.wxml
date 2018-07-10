@@ -71,6 +71,10 @@
       </view>
     </view>
   </view>
+  <view class="loadmore" wx:if="{{loadmore}}">
+    <view class="weui-loading"></view>
+    <view class="weui-loadmore__tips">正在加载...</view>
+  </view>
   <view class='publish-momment' hover-class='publish-momment-active' catchtap='publishMoment'>
     <image src='../../icons/add.png' class="add"></image>
   </view>

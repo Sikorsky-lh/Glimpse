@@ -174,3 +174,9 @@ Page {
   color: #c1c1c1;
   font-size: 0.9em;
 }
+
+.loadmore {
+  text-align: center;
+  background: #fff;
+  color: #a1a1a1;
+}

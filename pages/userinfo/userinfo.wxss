@@ -62,12 +62,19 @@
   margin-top: 40rpx;
 }
 
-.motto{
+.motto {
   margin-top: 20rpx;
-  margin-right: 100rpx; 
+  margin-right: 100rpx;
   border: 1px solid #c1c1c1;
   padding: 20rpx 0 0 20rpx;
   width: 95%;
   height: 200rpx;
   background: #eee;
+}
+
+.count {
+  display: inline-block;
+  color: #c1c1c1;
+  position: absolute;
+  right: 100rpx;
 }

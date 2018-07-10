@@ -3,14 +3,46 @@
 const app = getApp();
 //slider宽度
 var sliderWidth = 96;
+var count = 0;
 
 Page({
+
+  testData: {
+    testMoments: [{
+        id: 0,
+        userName: 'Sikorsky',
+        timeStamp: '2天前',
+        avatar: 'http://ww1.sinaimg.cn/large/ec8fa7e5gy1ft3zfjly9cj2020020wea.jpg',
+        content: 'WeUI 是一套同微信原生视觉体验一致的基础样式库，由微信官方设计团队为微信内网页和微信小程序量身设计，令用户的使用感知更加统一。',
+        imgs: ['http://ww1.sinaimg.cn/large/ec8fa7e5gy1ft2a420kn3j208u05tmxr.jpg',
+          'http://ww1.sinaimg.cn/large/ec8fa7e5gy1fqsf5calk7j20u06mbkjm.jpg',
+        ],
+        likes: 0,
+        comments: 3,
+        location: '',
+        liked: false
+      },
+      {
+        id: 1,
+        userName: 'Sikorsky',
+        timeStamp: '2天前',
+        avatar: 'http://ww1.sinaimg.cn/large/ec8fa7e5gy1fssaldn1mfj20hs0hs3zn.jpg',
+        content: 'WeUI 是一套同微信原生视觉体验一致的基础样式库，由微信官方设计团队为微信内网页和微信小程序量身设计，令用户的使用感知更加统一。',
+        imgs: ['http://ww1.sinaimg.cn/large/ec8fa7e5gy1flqth891jnj21e612sk3o.jpg',
+          'http://ww1.sinaimg.cn/large/ec8fa7e5gy1flqu5ftspyj20u01hc778.jpg',
+          'http://ww1.sinaimg.cn/large/ec8fa7e5gy1ft2a7shnyrj2076076q3w.jpg',
+          'http://ww1.sinaimg.cn/large/ec8fa7e5gy1ft2a420kn3j208u05tmxr.jpg'
+        ],
+      }
+    ]
+  },
   data: {
+    loadmore: false,
     tabs: ["全部动态", "我的关注"],
     activeIndex: 0,
     sliderOffset: 0,
     sliderLeft: 0,
-    notification: 10,
+    notification: 0,
     moments: [{
         id: 0,
         userName: 'Sikorsky',
@@ -88,8 +120,30 @@ Page({
     }
   },
 
+  onReachBottom() {
+    count++;
+    console.log(count);
+    console.log(this.data.loadmore)
+    if (count > 3) {
+      return;
+    }
+    let moments = this.data.moments;
+    let that = this;
+    this.setData({
+      loadmore: true
+    });
+    setTimeout(() => {
+      moments.push(...moments);
+      that.setData({
+        moments: moments,
+        loadmore: false
+      })
+    }, 2000);
+  },
+
   onPullDownRefresh() {
-    // let that=this;
+    let that = this;
+    let moments = this.data.moments;
     wx.setNavigationBarTitle({
       title: '加载中...',
     })
@@ -97,9 +151,11 @@ Page({
     setTimeout(() => {
       wx.setNavigationBarTitle({
         title: 'Glimpse',
-      })
+      });
+      moments.unshift(...that.testData.testMoments);
       this.setData({
-        notification: 2
+        notification: 2,
+        moments: moments
       });
       wx.hideNavigationBarLoading();
       wx.stopPullDownRefresh();

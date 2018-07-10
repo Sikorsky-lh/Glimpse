@@ -3,7 +3,8 @@ Page({
     date: "请选择生日",
     region: "请选择地区",
     avatar: '../../icons/mine.png',
-    motto: ""
+    motto: "",
+    count: 0
   },
 
   onReady() {
@@ -29,6 +30,12 @@ Page({
     })
   },
 
+  handleSchool(e) {
+    this.setData({
+      school: e.detail.value
+    })
+  },
+
   chooseImg() {
     let that = this;
     wx.chooseImage({
@@ -46,6 +53,7 @@ Page({
     console.log(e)
     this.setData({
       motto: e.detail.value,
+      count: e.detail.cursor
     });
   },
 
@@ -60,6 +68,13 @@ Page({
     if (!this.data.nickname) {
       this.toaster.showToast({
         msg: ' 请输入昵称！'
+      });
+      return;
+    };
+
+    if (!this.data.school) {
+      this.toaster.showToast({
+        msg: ' 请输入学校！'
       });
       return;
     };
@@ -91,8 +106,7 @@ Page({
       cancelText: '确认提交',
       confirmText: '返回修改',
       success: function(res) {
-        if (res.confirm) {
-        } else if (res.cancel) {
+        if (res.confirm) {} else if (res.cancel) {
           wx.showToast({
             title: '提交成功',
           });

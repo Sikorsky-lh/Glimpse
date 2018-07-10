@@ -14,6 +14,11 @@
   </view>
   <view class='user-info'>
     <view class='info-container'>
+      <input placeholder='请输入学校' bindinput='handleSchool'></input>
+    </view>
+  </view>
+  <view class='user-info'>
+    <view class='info-container'>
       <view class='info-key'>性别</view>
       <radio-group class="input">
         <radio checked='true'>男</radio>
@@ -24,7 +29,7 @@
   <view class='user-info'>
     <view class='info-container'>
       <view class='info-key'>生日</view>
-      <picker mode="date" value="{{date}}" start="1949-09-01" end="2018-01-01" bindchange="bindDateChange">
+      <picker mode="date" value="{{date}}" start="1949-10-01" end="2018-01-01" bindchange="bindDateChange">
         <view class="input">{{date}}</view>
       </picker>
     </view>
@@ -37,7 +42,8 @@
       </picker>
     </view>
   </view>
-  <view>个性签名</view>
-  <textarea class='motto' placeholder='请输入个性签名...' adjust-position bindinput='handleMotto'></textarea>
+  <view style='display: inline-block;'>个性签名</view>
+  <view class='count'>{{count}}/25</view>
+  <textarea class='motto' placeholder='请输入个性签名...' adjust-position bindinput='handleMotto' maxlength='25'></textarea>
   <button type='primary' class='submit-btn' bindtap='confirm'>提交</button>
 </view>
