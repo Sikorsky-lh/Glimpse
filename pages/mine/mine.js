@@ -39,6 +39,12 @@ Page({
     })
   },
 
+  goToSearch(){
+    wx.navigateTo({
+      url: '../search/search',
+    })
+  },
+
   changeIdentity() {
     this.toaster.showToast({
       msg: '非Glimpse认证账号，无法使用此功能，详情查看“我的-常见问题”',

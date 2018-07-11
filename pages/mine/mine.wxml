@@ -1,6 +1,12 @@
 <toaster id="toaster"></toaster>
 
 <view class='page'>
+  <view class='mine-search'>
+    <view class='search' hover-class='search-active' bindtap='goToSearch'>
+      <icon class="" type="search" size="14"></icon>
+      <view class='search-txt'>搜索</view>
+    </view>
+  </view>
   <view class='mine-info'>
     <view class='mine-user-info' wx:if="{{logged}}">
       <image class='avatar' src='{{avatar}}' bindtap='previewAvatar'></image>

@@ -2,9 +2,38 @@ Page {
   background: #eee;
 }
 
+.mine-search{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #eee;
+}
+
+.search{
+  width: 100%;
+  background: #fff;
+  margin: 20rpx 15rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10rpx;
+  border-radius:10rpx; 
+}
+
+.search-active{
+  background: #efeff4;
+}
+
+.search-txt{
+  margin-left: 10rpx;
+  font-size: 1em;
+  color: #a1a1a1;
+}
+
 .mine-info {
   background: #fff;
-  padding: 10px;
+  padding: 20px 10px;
   margin-bottom: 15px;
 }
 

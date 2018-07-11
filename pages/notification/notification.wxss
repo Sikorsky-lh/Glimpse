@@ -1,12 +1,17 @@
+Page{
+  background: #eee;
+}
+
 .notification {
   display: flex;
   flex-direction: row;
   border-bottom: 1px solid #eee;
   padding: 20rpx;
+  background: #fff;
 }
 
 .notification:first {
-  border-top: 1px solid #eee;
+  margin-top: 1px;
 }
 
 .avatar {

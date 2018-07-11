@@ -1,6 +1,8 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/search/search",
+    "pages/mine/mine",
     "pages/comment/comment",
     "pages/userinfo/userinfo",
     "pages/publish/publish",
@@ -8,7 +10,6 @@
     "pages/detail/detail",
     "pages/userpage/userpage",
     "pages/guest/guest",
-    "pages/mine/mine",
     "pages/publication/publication"
   ],
   "window": {
